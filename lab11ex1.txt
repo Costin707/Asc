@@ -1,0 +1,23 @@
+1. Un procesor are un pipeline cu 5 stadii: Fetch, Decode, Execute, Memory, Write-back. Determinati
+cate cicluri sunt necesare pentru a executa 4 instructiuni daca nu apar hazarduri. Ce impact
+ar avea un hazard de date ıntre instructiunile 1 si 2 asupra ciclurilor totale de executie?
+
+	1	2	3	4	5	6	7	8	9	10	11
+I1      F	D	E	M      WB
+I2		F	D	E	M      WB
+I3			F	D	E	M      WB
+I4				F	D	E	M	WB
+
+=> Sunt necesare 8 cicluri
+
+
+Daca apare un hazard de date intre instructinile 1 si 2:
+
+	1       2       3       4       5       6       7       8       9       10      11
+I1      F       D       E       M      WB 
+I2              F       D	S	S       E       M      WB
+I3                      F       D	S	S       E       M      WB
+I4                              F       D       S	S	E       M       WB
+
+=> Sunt necesare 9 cicluri
+
