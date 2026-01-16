@@ -1,0 +1,25 @@
+2. Sa consideram un procesor cu urmatoarea frecventa a instructiunilor si urmatoarele costuri:
+• ALU pentru ıntregi - 50%, 1 ciclu
+• Load - 20%, 5 cicli
+• Store - 10%, 1 ciclu
+• Branch - 20%, 2 cicli
+Calculati CPI si decideti care schimbare ar aduce cea mai buna performanta dintre urmatoarele:
+• implementarea unui mecanism de branch prediction pentru a reduce costul branch-urilor
+la 1 ciclu;
+• folosirea unui data cache care are reduce costul unui load la 3 cicli.
+
+
+CPI= 0.5*1+ 0.2*5+ 0.1*1+ 0.2*2= 0.5+ 1+ 0.1 +0.4= 2
+CPI=2
+
+
+implementarea unui mecanism de branch prediction pentru a reduce costul branch-urilor
+la 1 ciclu:
+
+CPI=2- 0.2*1= 1.8
+
+folosirea unui data cache care are reduce costul unui load la 3 cicli:
+
+CPI=2-0.2*2= 1.6
+
+1.6<1.8 ==> Cea mai buna performanta este folosirea unui data cache care are reduce costul unui load la 3 cicli.

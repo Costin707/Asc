@@ -1,0 +1,21 @@
+4. Memoria principala are o dimensiune de 2^16 bytes, iar cache-ul are o capacitate de 1 KB, cu o
+dimensiune a blocului de 32 bytes. Calculati numarul total de blocuri din memoria principala.
+Calculati numarul de linii de cache. Determinati unde va fi mapata adresa 0x3A7F ın cache,
+conisderand cache-ul direct-mapped.
+
+Consideram 1KB=2^10?
+
+nr. blocuri din memoria principala= 2^16/2^5=2^11 blocuri in memoria principala
+nr. blocuri din memoria cache=2^10/ 2^5= 2^5 blocuri in memoria cache
+
+
+0x3A7F
+3	A	7	F
+0011	1010	0111	1111
+
+Bloc=2^5B ==> offset 5 biti ==>  offset:  1 1111
+2^5 blocuri in memoria cache ==> index 5 biti ==> 1 0011=16+2+1=19  
+tagul: 00 1110
+
+Adresa 0x3A7F se afla pe linia 19 in cache
+

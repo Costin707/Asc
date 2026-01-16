@@ -1,0 +1,13 @@
+3. Daca un procesor superscalar este introdus pentru a rezolva hazardurile de date, cate cicluri
+pot fi economisite pentru urmatoarea secventa de instructiuni:
+ADD R1, R2, R3
+SUB R4, R1, R5
+MUL R6, R7, R8
+
+
+Instructiuni		1	2	3	4	5	6	7	8	9	10
+ADD R1, R2, R3		F	D	E	M	WB
+SUB R4, R1, R5			F	D	S	S	E	M	WB
+MUL R6, R7, R8				F	D	S	S	E	M	WB
+
+==>9 cicluri
